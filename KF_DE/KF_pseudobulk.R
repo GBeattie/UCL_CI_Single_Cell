@@ -16,7 +16,7 @@ library(limma)
 ## Import
 ## Data from https://doi.org/10.1038/s41590-021-00931-3
 ## Only one cell type (activated CD8+Tem), CD38-ve sort only
-sce = readH5AD('Documents/ResearchProjects/_scRNAseqWorkflows/Increate_v4/UCL_CI_SC/CD8TemPD1_only.h5ad')
+sce = readH5AD('CD8TemPD1_only.h5ad')
 ## scanpy.X = sce@assay
 sce@assays@data@listData[['counts']] <- sce@assays@data@listData[['X']] 
 ## covar: disease = healthy donor (HD) or mutiple myeloma (MM)
@@ -87,8 +87,8 @@ res$gene<-rownames(res)
 res = as_tibble(res)
 ## quick volcano
 ggplot(res, aes(logFC, -log10(adj.P.Val)))+
-  geom_point(size=1,alpha=0.5, aes(color=adj.P.Val<0.01))+
-  geom_text(aes(label=ifelse(adj.P.Val<0.01,gene,'')),size=2)
+  geom_point(size=1,alpha=0.5, aes(color=adj.P.Val<0.05))+
+  geom_text(aes(label=ifelse(adj.P.Val<0.05,gene,'')),size=3)
 
 
 
