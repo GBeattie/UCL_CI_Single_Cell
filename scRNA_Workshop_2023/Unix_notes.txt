@@ -1,0 +1,44 @@
+## These note outline how to access the Myriad servers, basic UNIX navigation, downloading example .fastq and reference
+## transcriptome, creating a bash script file (see tutorial_cellranger.sh) and submitting a job to the myriad queue
+## For full details on Myriad account creation and usage go to: https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/
+
+## Open Terminal (mac) or command prompt (windows)
+
+ssh regmgbe@myriad.rc.ucl.ac.uk ## ssh = connect to server. Do this from command prompt on your machine.
+ls ## ls = list files in current directory
+cd Scratch/ ## cd = change directory (remember tab will autocomplete file and folder names)
+mkdir Tutorial ## mkdir = make directory
+cd Tutorial
+mkdir fastqs
+cd fastqs
+wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/neuron_1k_v3/neuron_1k_v3_fastqs.tar ## wget = download from internet
+wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/heart_1k_v3/heart_1k_v3_fastqs.tar
+ls
+tar -xf heart_1k_v3_fastqs.tar ## tar = unpack .tar archive, -xf = optional tar settings
+tar -xf neuron_1k_v3_fastqs.tar 
+ls heart_1k_v3_fastqs
+ls neuron_1k_v3_fastqs
+rm heart_1k_v3_fastqs.tar ## rm = delete file
+rm neuron_1k_v3_fastqs.tar 
+cd .. ## cd .. = go to parent directory
+wget https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-mm10-2020-A.tar.gz
+tar -zxvf refdata-gex-mm10-2020-A.tar.gz ## same as previous tar command, but also extracts gzipped files
+rm refdata-gex-mm10-2020-A.tar.gz
+cd fastqs/heart_1k_v3_fastqs
+pwd ## show full path to current directory
+cd ..
+cd ..
+## Go to tutorial_cellranger.sh on GitHub, for more information on running cellranger count go to:
+## https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/tutorial_ct
+vim tutorial_cellranger.sh ## vim = create or open a text file
+i ## i = activate insert mode on vim
+[Esc] ## By pressing escape you exit insert mode in vim
+:wq ## write (i.e. save) and exit vim
+ls
+cat tutorial_cellranger.sh ## cat = print contents of file in console
+qsub tutorial_cellranger.sh ## qsub = submit job to queue
+qstat ## view job progress
+
+## Other useful commands
+ls -l ## view details of files
+qdel [job id number] ## delete job
