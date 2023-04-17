@@ -4,7 +4,7 @@
 
 ## Open Terminal (mac) or command prompt (windows)
 
-ssh regmgbe@myriad.rc.ucl.ac.uk ## ssh = connect to server. Do this from command prompt on your machine.
+ssh regmgbe@myriad.rc.ucl.ac.uk ## ssh = connect to server. Do this from terminal/command prompt on your machine.
 ls ## ls = list files in current directory
 cd Scratch/ ## cd = change directory (remember tab will autocomplete file and folder names)
 mkdir Tutorial ## mkdir = make directory
@@ -42,3 +42,8 @@ qstat ## view job progress
 ## Other useful commands
 ls -l ## view details of files
 qdel [job id number] ## delete job
+cd fastqs/heart_1k_v3_fastqs ## cd to subdirectory of directory
+mv * .. ## move all files/directories in dirctory to parent directory
+mv heart_1k_v3_S1_L001_I1_001.fastq.gz heart_1k_v3_fastqs ## move single file into a directory
+mv heart_1k_v3_S1_L00* heart_1k_v3_fastqs ## move all files beginning with heart_1k_v3_S1_L00 into a directory
+mv *.tar .. ## move all files ending with .tar into a directory
