@@ -1,4 +1,4 @@
-## These note outline how to access the Myriad servers, basic UNIX navigation, downloading example .fastq and reference
+## These notes outline how to access the Myriad servers, basic UNIX navigation, downloading example .fastq and reference
 ## transcriptome, creating a bash script file (see tutorial_cellranger.sh) and submitting a job to the myriad queue
 ## For full details on Myriad account creation and usage go to: https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/
 
