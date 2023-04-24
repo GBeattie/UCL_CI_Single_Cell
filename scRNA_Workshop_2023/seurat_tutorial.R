@@ -20,7 +20,7 @@ mtx.neuron <- Read10X_h5(filename = "./GEX/neuron/filtered_feature_bc_matrix.h5"
 seu.heart <- CreateSeuratObject(mtx.heart, project = "Heart")
 seu.neuron <- CreateSeuratObject(mtx.neuron, project = "Neuron")
 
-## Calculate mitochondiral %
+## Calculate mitochondrial %
 seu.heart <- PercentageFeatureSet(seu.heart, pattern = "^mt-", col.name = "percent.mito")
 seu.neuron <- PercentageFeatureSet(seu.neuron, pattern = "^mt-", col.name = "percent.mito")
 
@@ -148,7 +148,7 @@ table(seu.int$orig.ident, seu.int$seurat_clusters) ## print 2-way frequency tabl
 ## subclustering
 seu.int.clust3 <- subset(seu.int, subset = seurat_clusters == "3") 
 ## Follow this with UMAP and clustering steps AFTER NormalizeData() function,
-## all other steps can be carries out as is (just remember to use the new object,
+## all other steps can be carried out as is (just remember to use the new object,
 ## seu.int.clust3, instead of the original, seu.int)
 
 #########################################
