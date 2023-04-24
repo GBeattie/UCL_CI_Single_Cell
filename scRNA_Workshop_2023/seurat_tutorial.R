@@ -157,7 +157,7 @@ seu.int.clust3 <- subset(seu.int, subset = seurat_clusters == "3")
 ## Say you want GO terms for the cluster markers of cluster 3 (you may need to install clipr)
 ## the below command will extract those marker genes and put them on your clipboard,
 ## you can then paste these into http://geneontology.org/
-clipr::write_clip(cluster.markers %>% filter(cluster == "3") %>% pull(gene))
+clipr::write_clip(cluster.markers %>% filter(cluster == "12") %>% pull(gene))
 
 
 
