@@ -32,7 +32,7 @@ cd ..
 ## Go to tutorial_cellranger.sh on GitHub, for more information on running cellranger count go to:
 ## https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/tutorial_ct
 vim tutorial_cellranger.sh ## vim = create or open a text file
-i ## i = activate insert mode on vim
+i ## i = activate insert mode on vim (paste in contents of tutorial_cellranger.sh)
 [Esc] ## By pressing escape you exit insert mode in vim
 :wq ## write (i.e. save) and exit vim
 ls
