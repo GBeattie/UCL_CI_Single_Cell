@@ -1,6 +1,7 @@
 ## These notes outline how to access the Myriad servers, basic UNIX navigation, downloading example .fastq and reference
 ## transcriptome, creating a bash script file (see tutorial_cellranger.sh) and submitting a job to the myriad queue
 ## For full details on Myriad account creation and usage go to: https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/
+## For Windows users, it is recommended to use PuTTy or OpenSSH, see here for instructions: https://www.rc.ucl.ac.uk/docs/howto/
 
 ## Open Terminal (mac) or command prompt (windows)
 
