@@ -22,7 +22,7 @@
 # Replace "<your_UCL_id>" with your UCL user ID
 #$ -wd /home/regmgbe/Scratch/Tutorial
 
-# 8. Run the application.
+# Run the application.
 module load cellranger/6.0.1
 
 cellranger count --id=heart \
