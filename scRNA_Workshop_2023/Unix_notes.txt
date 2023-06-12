@@ -3,9 +3,9 @@
 ## For full details on Myriad account creation and usage go to: https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/
 ## For Windows users, it is recommended to use PuTTy or OpenSSH, see here for instructions: https://www.rc.ucl.ac.uk/docs/howto/
 
-## Open Terminal (mac) or command prompt (windows)
+## Open Terminal (mac) or PuTTy/OpenSSH (windows)
 
-ssh regmgbe@myriad.rc.ucl.ac.uk ## ssh = connect to server. Do this from terminal/command prompt on your machine.
+ssh regmgbe@myriad.rc.ucl.ac.uk ## ssh = connect to server. 
 ls ## ls = list files in current directory
 cd Scratch/ ## cd = change directory (remember tab will autocomplete file and folder names)
 mkdir Tutorial ## mkdir = make directory
